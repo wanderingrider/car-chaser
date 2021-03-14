@@ -1,0 +1,50 @@
+<div class='item-contents'>
+  <h1 class='title'>新規情報一覧</h1>
+  <ul class=item-lists>
+    <%# @item.each do |item| %>
+    <li class='list'>
+        <%#= link_to item_path(item.id) do %>
+        <%#div class='item-img-content'>
+          <%= image_tag item.image, class: "item-img" %>
+
+          
+          <%# if item.shipping.present? %>
+          <%#div class='解決済'>
+            <span>解決済</span>
+          </div>
+          <%# end %>
+          <%#/div>
+
+        <div class='item-info'>
+          <h3 class='item-name'>
+            <%= item.infomation_name %>
+          <%#/h3>
+          <%#div class='theft_day'>
+            <span><%= item.theft_day %><%#br><%#%= item.user.name %><%#/span>
+            <%#/div>
+          </div>
+        <% end %>
+      </li> 
+
+      <%# if @item.length == 0 %>
+        <li class='list'>
+        <%= image_tag "fiat-1754723_1920.jpg", class: "item-img" %>
+        <div class='item-info'>
+          <h3 class='item-name'>
+            盗難情報はこちらに表示します。
+          </h3>
+          <div class='item-price'>
+            <span>2021日2月14日発生<br>user名</span>
+            </div>
+        </div>
+      </li>
+      
+    <%# end %>
+
+
+    
+
+
+
+  </ul> 
+</div>

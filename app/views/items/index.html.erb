@@ -1,1 +1,27 @@
 <%= render "shared/header" %>
+
+<div class="feature-contents">
+  <div class="title-contents">
+    <h2 class="service-title">あなたの車を取り戻そう</h2><br><h2 class="sub-title">車の盗難情報を共有するアプリです。</h2>
+  </div>
+  <div class="top-img">
+    <%= image_tag "car-1835506_1920.jpg", class:"list-pict" %>
+  </div>
+</div>
+
+<div class="wrapper ">
+  <div class="side_bar">
+    <%= image_tag "cuba-3207576_1920.jpg", class:"menu-pict" %>
+    <%= render "side_bar" %>
+  </div>
+  <div class="item-contents">
+    <%= render "information_posting" %>
+  </div>
+</div>
+
+<%= link_to("#", class: 'purchase-btn') do %>
+  <span class='purchase-btn-text'>共有する</span>
+  <%= image_tag 'van-297323_1280.png' , size: '185x50' ,class: "purchase-btn-icon" %>
+<% end %>
+
+<%= render "shared/footer" %>

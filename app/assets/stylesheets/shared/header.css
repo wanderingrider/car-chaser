@@ -4,10 +4,10 @@
 
 .top-page-header {
   width: 100vw;
-  padding: 2vh 15vw;
+  padding: 1vh 15vw;
   display: flex;
   flex-direction: column;
-  background-color: aquamarine;
+  background: linear-gradient(to right,#228B22, #2E8B57);
 }
 
 .nav {
@@ -26,14 +26,15 @@
 }
 
 .category-list {
+  font-size: 30px;
   text-decoration: none;
   margin-right: 3vw;
-  color: #333333;
+  color: white;
 }
 
 .brand-list {
   text-decoration: none;
-  color: #333333;
+  color: white;
 }
 
 .lists-right {
@@ -45,24 +46,24 @@
 .user-nickname {
   text-decoration: none;
   margin-right: 3vw;
-  color: #333333;
+  color: white;
   font-weight: bold;
 }
 
 
 .logout {
   text-decoration: none;
-  color: #333333;
+  color: white;
 }
 
 .login {
   text-decoration: none;
   line-height: 32px;
   margin-right: 3vw;
-  color: #333333;
+  color: white;
 }
 
 .sign-up {
   text-decoration: none;
-  color: #333333;
+  color: white;
 }
