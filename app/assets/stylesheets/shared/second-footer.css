@@ -1,0 +1,24 @@
+.second-footer{
+  height: 8vh;
+  width: 100vw;
+  background-color: #696969;
+  text-align: center;
+  display: flex;
+  text-align: center;
+  justify-content: flex-end;
+  margin-top: auto;
+  position: fixed;
+    bottom: 0;
+}
+
+.car-chaser-contents {
+  margin-right: 18vh;
+}
+.footer-link {
+  color:white;
+  text-decoration: none;
+}
+
+.footer-content-head {
+  color: white;
+}
