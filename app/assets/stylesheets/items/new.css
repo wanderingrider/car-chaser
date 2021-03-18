@@ -2,6 +2,9 @@
 
 
 .items-sell-contents {
+
+  background-color: #f5f5f5;
+
   font-family: "Source Sans Pro", Helvetica, Arial, "æ¸¸ã‚´ã‚·ãƒƒã‚¯ä½“", "YuGothic", "ãƒ¡ã‚¤ãƒªã‚ª", "Meiryo", sans-serif;
   font-size: 14px;
   display: flex;
@@ -17,7 +20,9 @@
 
 .items-sell-main {
   background-color: #FFF;
+
   width: 55vw;
+
   min-width: 450px;
   padding: 10vh 15vw;
 }
@@ -43,7 +48,7 @@
   font-weight: bold;
   min-width: 170px;
   margin-bottom: 10px;
-  margin-top: px;
+
 }
 
 .select-box {
@@ -111,6 +116,7 @@
 
 
 
+
 /* 商品の詳細など */
 .items-detail {
 
@@ -126,6 +132,62 @@
 .select-box {
   margin: 2vh 0;
 }
+
+=======
+/* /商品名と商品説明 */
+
+/* 商品の詳細など */
+.items-detail {
+  display: flex;
+  justify-content: space-between;
+  padding: 2vh 0;
+}
+
+.items-detail>.form {
+  width: 300px;
+  padding: 2vh 0;
+}
+
+.select-box {
+  margin: 2vh 0;
+}
+
+/* /商品の詳細など */
+
+/* 販売価格 */
+.sell-price {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.price-content {
+  width: 300px;
+  border-bottom: 1px solid #ccc;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.price-text {
+  /* min-width: 170px; */
+  display: flex;
+  align-items: center;
+}
+
+.sell-yen {
+  font-size: 18px;
+}
+
+.price-input {
+  height: 30px;
+  text-align: right;
+  padding-right: 10px;
+}
+
+/* /販売価格 */
+
 
 /* 注意書き */
 .caution {
@@ -190,6 +252,7 @@
 
 .inc {
   font-size: 13px;
+
 }
 
 .input-theft-wrap {
@@ -228,5 +291,8 @@
   margin-bottom: 5px;
   font-size: 14px;
   font-weight: bold;
+}
+
+
 }
 

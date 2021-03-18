@@ -6,6 +6,7 @@
   </div>
   <div class="top-img">
     <%= image_tag "car-1835506_1920.jpg", class:"list-pict" %>
+    <%= image_tag "havana-1982410_1920.jpg", class:"list-pict2" %>
   </div>
 </div>
 
@@ -19,7 +20,7 @@
   </div>
 </div>
 
-<%= link_to("#", class: 'purchase-btn') do %>
+<%= link_to(new_item_path, class: 'purchase-btn') do %>
   <span class='purchase-btn-text'>共有する</span>
   <%= image_tag 'van-297323_1280.png' , size: '185x50' ,class: "purchase-btn-icon" %>
 <% end %>
