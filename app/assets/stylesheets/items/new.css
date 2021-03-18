@@ -2,9 +2,6 @@
 
 
 .items-sell-contents {
-
-  background-color: #f5f5f5;
-
   font-family: "Source Sans Pro", Helvetica, Arial, "æ¸¸ã‚´ã‚·ãƒƒã‚¯ä½“", "YuGothic", "ãƒ¡ã‚¤ãƒªã‚ª", "Meiryo", sans-serif;
   font-size: 14px;
   display: flex;
@@ -120,7 +117,7 @@
 /* 商品の詳細など */
 .items-detail {
 
- 
+
 
 }
 
@@ -294,5 +291,5 @@
 }
 
 
-}
+
 

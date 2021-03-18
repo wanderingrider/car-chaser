@@ -3,18 +3,20 @@ class Item < ApplicationRecord
     validates :information_name
     validates :description
     validates :image
+    validates :theft_day
   end
 
-
-  validates :prefecture_id, numericality: { other_than: 1 }
+  with_options numericality: { other_than: 1 } do
+    validates :prefecture_id
+    validates :theft_place_id
+  end
 
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :prefecture
   belongs_to :theft_place
 
   has_one_attached :image
-
-  extend ActiveHash::Associations::ActiveRecordExtensions
-  belongs_to :Prefecture
+  belongs_to       :user
+  
 
 end
