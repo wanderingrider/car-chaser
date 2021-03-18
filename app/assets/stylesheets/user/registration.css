@@ -99,10 +99,12 @@
   resize: none;
 }
 
+
 .input-birth-wrap {
   display: flex;
   flex-wrap: wrap;
 }
+
 
 .input-birth-wrap select {
   width: 75px;

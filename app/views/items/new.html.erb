@@ -1,6 +1,7 @@
+
 <div class="items-sell-contents">
   <%= render "shared/second-header" %>
-  
+
   <div class="items-sell-main">
     <h2 class="items-sell-title">盗難情報情報を入力</h2>
     <%= form_with model: @item, local: true do |f| %>
@@ -29,7 +30,9 @@
         車種名
         <span class="indispensable">必須</span>
       </div>
-      <%= f.text_area :product_name, class:"items-text", id:"item-name", placeholder:"車種名", maxlength:"40" %>
+
+      <%= f.text_area :information_name, class:"items-text", id:"item-name", placeholder:"車種名", maxlength:"40" %>
+
       <div class="items-explain">
         <div class="weight-bold-text">
           盗難時の状況
@@ -57,27 +60,57 @@
       
 
     
-    <div class="items-detail">
-      
-      <div class="form">
-        
-        <div class="weight-bold-text">
-          盗難にあった場所（MAP情報も合わせて掲載できます.）
-          <span class="indispensable">必須</span>
-        </div>
-        <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {class:"select-box", id:"item-prefecture"}) %>
-        
+
+   <div class="items-detail">
+
+
+    <div class="form">
+  
+      <div class='weight-bold-text'>
+        <label class="form-text">盗難にあった日付</label>
+        <span class="indispensable">必須</span>
       </div>
-    </div>
+      <div class='input-theft-wrap'>
+        <%= raw sprintf(
+                  f.date_select(
+                    :theft_day,
+                    class:'select-theft',
+                    id:"theft-date",
+                    use_month_numbers: true,
+                    prompt:'--',
+                    start_year: 1930,
+                    end_year: (Time.now.year - 5),
+                    date_separator: '%s'),
+                  "<p> 年 </p>", "<p> 月 </p>") + "<p> 日 </p>" %>
+      </div>            
+      
     
-    <div class="caution">
+      <div class="weight-told-text">
+          盗難にあった場所
+          <span class="indispensable">必須</span>
+      </div>
+        <%= f.collection_select(:theft_place_id, TheftPlace.all, :id, :name, {class:"select-box", id:"item-theft-place"}) %>
+
+      <div class="weight-told-text">
+          盗難にあった地域（MAP情報も合わせて掲載できます。）
+          <span class="indispensable">必須</span>
+      </div>
+        <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {class:"select-box", id:"item-prefecture"}) %>
+    
+    </div>
+   </div>  
+
+      <div class="caution">
+
       <p class="sentence">
         <a href="#">禁止されている情報、</a>
         <a href="#">行為</a>
         を必ずご確認ください。
-      </p>
-    </div>
-    
+
+        </p>
+      </div>
+  
+
     
     <div class="sell-btn-contents">
       <%= f.submit "提供する" ,class:"sell-btn" %>
