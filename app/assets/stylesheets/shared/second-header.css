@@ -1,0 +1,24 @@
+.second-header {
+  display: flex;
+  padding: 0 30vw;
+  margin: 20px 0 20px 0;
+}
+
+.second-header-inner {
+  justify-content: center;
+  display: inline-block;
+  display: flex;
+  height: 80px;
+  width: 80vw;
+  background: linear-gradient(to right,#228B22, #2E8B57);
+  border-radius: 3%;
+}
+
+.second-logo {
+  display: block;
+  color: white;
+  margin-top: 20px;
+  font-size: 30px;
+  text-decoration: none;
+  justify-content: center;
+}

@@ -1,6 +1,4 @@
-
-
-.footer{
+.second-footer{
   height: 8vh;
   width: 100vw;
   background-color: #696969;
@@ -9,6 +7,8 @@
   text-align: center;
   justify-content: flex-end;
   margin-top: auto;
+  position: fixed;
+    bottom: 0;
 }
 
 .car-chaser-contents {

@@ -1,5 +1,6 @@
 .wrapper{
   display: flex;
+  margin-top: 80px;
 }
 
 
@@ -12,6 +13,15 @@
   max-height: 100%;
   width: 100%;
   object-fit: cover;
+}
+
+.list-pict2{
+  max-height: 20vh;
+  width:  100vw;
+  object-fit: cover;
+  padding: 0 25px 0 25px;
+  opacity: 0.6;
+  display:
 }
 
 .title-contents {
@@ -37,16 +47,18 @@
   width: 100%;
   object-fit: cover;
 } 
+
+
+.menu-pict{
+  width: 300px;
+  height: 20vh;
+}
+
 .side_bar{
   background: linear-gradient(#228B22, #2E8B57);
   width: 300px;
   height: 100vh;
   margin: 0px 15px 5px 15px;
-}
-
-.menu-pict{
-  width: 300px;
-  height: 30vh
 }
 
 .list-choise{
@@ -91,8 +103,8 @@
 }
 
 html{
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
   background-color:#DCDCDC;
 }
 

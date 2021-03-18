@@ -1,7 +1,7 @@
-<%= render "shared/second-header" %>
+
 <div class="items-sell-contents">
-  
-  
+  <%= render "shared/second-header" %>
+
   <div class="items-sell-main">
     <h2 class="items-sell-title">盗難情報情報を入力</h2>
     <%= form_with model: @item, local: true do |f| %>
@@ -30,7 +30,9 @@
         車種名
         <span class="indispensable">必須</span>
       </div>
+
       <%= f.text_area :information_name, class:"items-text", id:"item-name", placeholder:"車種名", maxlength:"40" %>
+
       <div class="items-explain">
         <div class="weight-bold-text">
           盗難時の状況
@@ -58,6 +60,7 @@
       
 
     
+
    <div class="items-detail">
 
 
@@ -98,13 +101,16 @@
    </div>  
 
       <div class="caution">
+
       <p class="sentence">
         <a href="#">禁止されている情報、</a>
         <a href="#">行為</a>
         を必ずご確認ください。
+
         </p>
       </div>
   
+
     
     <div class="sell-btn-contents">
       <%= f.submit "提供する" ,class:"sell-btn" %>

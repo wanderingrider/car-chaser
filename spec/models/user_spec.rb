@@ -69,12 +69,20 @@ RSpec.describe User, type: :model do
       it 'ユーザー本名は、名字と名前がそれぞれ必須であること' do
         @user.first_name = ''
         @user.valid?
-        expect(@user.errors.full_messages).to include("First name can't be blank", 'First name is invalid')
+
+
+        expect(@user.errors.full_messages).to include("First name can't be blank", "First name is invalid")
+
       end
       it 'ユーザー本名は、名字と名前がそれぞれ必須であること' do
         @user.last_name = ''
         @user.valid?
-        expect(@user.errors.full_messages).to include("Last name can't be blank", 'Last name is invalid')
+
+          
+        
+
+        expect(@user.errors.full_messages).to include("Last name can't be blank", "Last name is invalid")
+
       end
       it 'ユーザー本名は、全角（漢字・ひらがな・カタカナ）での入力が必須であること' do
         @user.last_name = 'yamada'
