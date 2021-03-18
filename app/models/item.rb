@@ -13,8 +13,7 @@ class Item < ApplicationRecord
   belongs_to :theft_place
 
   has_one_attached :image
-
-  extend ActiveHash::Associations::ActiveRecordExtensions
-  belongs_to :Prefecture
+  belongs_to       :user
+  
 
 end
