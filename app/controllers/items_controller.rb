@@ -1,8 +1,8 @@
 class ItemsController < ApplicationController
   def index
   end
-<<<<<<< Updated upstream
-=======
+
+
 
   def new
     @item = Item.new
@@ -26,5 +26,5 @@ class ItemsController < ApplicationController
   def item_params
     params.require(:item).permit(:information_name, :description, :prefecture_id, :theft_place, :image).merge(user_id: current_user.id)
   end
->>>>>>> Stashed changes
+
 end
