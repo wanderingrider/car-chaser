@@ -1,8 +1,9 @@
 .wrapper{
   display: flex;
-  margin-top: 80px;
-}
+  max-height: 100vh - 20vh;
+  margin-top: 15vh;
 
+}
 
 .feature-contents{
   height: 100vh;
@@ -15,7 +16,7 @@
   object-fit: cover;
 }
 
-.list-pict2{
+.list-pict2 {
   max-height: 20vh;
   width:  100vw;
   object-fit: cover;
@@ -83,7 +84,7 @@
   background-color:#DCDCDC;
   display: flex;
   flex-direction: column;
-  width: 100vh;
+  width: 100%;
   height: 100vh;
 }
 
@@ -93,6 +94,7 @@
   font-weight: bold;
   text-align: center;
 }
+
 .item-name {
   font-size: 2.5vh;
 }

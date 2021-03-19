@@ -2,6 +2,7 @@ class ItemsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :edit, :create, :update]
   
   def index
+    @item = Item.order('created_at DESC').limit(6).offset(1)
   end
 
   def new

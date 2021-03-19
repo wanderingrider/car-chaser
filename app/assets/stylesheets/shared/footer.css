@@ -1,15 +1,22 @@
-
+.footer2{
+  min-height: 15vh;
+  position: relative;
+  padding-bottom: 120px;
+  box-sizing: border-box;
+}
 
 .footer{
-  height: 8vh;
+
   width: 100vw;
   background-color: #696969;
   text-align: center;
   display: flex;
   text-align: center;
   justify-content: flex-end;
-  margin-top: auto;
+  position: absolute;
+  bottom: 0; 
 }
+
 
 .car-chaser-contents {
   margin-right: 18vh;
