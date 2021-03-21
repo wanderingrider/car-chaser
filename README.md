@@ -36,11 +36,11 @@
 
 | Column             | Type       |     Options                    |
 | ------------------ | --------   | -------------------------      |                       
-| address            | string     | null: false                    |
+|address            | string     | null: false                    |
 | latitude           | float      | null: false                    |
 | longitude          | float      | null: false                    |
 | user               | references | null: false, foreign_key: true |
-| item               | references | null: false, foreign_key: true |
+| item               | references | null: false,  foreign_key: true |
 
 ### Association
 - belongs_to :user
