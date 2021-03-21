@@ -4,7 +4,7 @@ class ItemsController < ApplicationController
 
 
   def index
-    @item = Item.order('created_at DESC').limit(6).offset(1)
+    @item = Item.all.order('created_at DESC').limit(6).offset(1)
   end
 
   def new

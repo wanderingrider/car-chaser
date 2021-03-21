@@ -14,8 +14,8 @@
 | read_last_name      | string  | null:false                |
 
 ### Association
-- has_many :items
-- has_many :maps
+- has_many  :items
+- belongs_to :location
 
 ## itemsテーブル
 
@@ -30,18 +30,30 @@
 
 ### Association
 -belongs_to :user
--has_one :map
+-has_one :location
 
+## locations テーブル
+
+
+| Column             | Type       |     Options                    |
+| ------------------ | --------   | -------------------------      |      
+| user               | references | null: false, foreign_key: true |
+| item               | references | null: false, foreign_key: true |
+
+### Association
+-belongs_to :user
+-belongs_to :item
+-has_one    :map
+ 
  ## mapsテーブル
 
 | Column             | Type       |     Options                    |
 | ------------------ | --------   | -------------------------      |                       
-|address            | string     | null: false                    |
+|address             | string     | null: false                    |
 | latitude           | float      | null: false                    |
 | longitude          | float      | null: false                    |
 | user               | references | null: false, foreign_key: true |
-| item               | references | null: false,  foreign_key: true |
+| item               | references | null: false, foreign_key: true |
 
 ### Association
-- belongs_to :user
-- belongs_to :item
+- belongs_to :gps

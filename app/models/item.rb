@@ -11,11 +11,13 @@ class Item < ApplicationRecord
     validates :theft_place_id
   end
 
+  has_one_attached :image
+  belongs_to       :user
+  has_one          :location
+
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :prefecture
   belongs_to :theft_place
 
-  has_one_attached :image
-  belongs_to       :user
-  has_one          :map
+  
 end
