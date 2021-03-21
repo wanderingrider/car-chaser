@@ -9,7 +9,6 @@ RSpec.describe Item, type: :model do
     context '商品情報を保存できるとき' do
       it '必要な情報を適切に入力すると、商品情報を保存できること' do
         expect(@item).to be_valid
-        
       end
     end
 
@@ -42,7 +41,7 @@ RSpec.describe Item, type: :model do
       it '盗難にあった日付情報が必須のこと' do
         @item.theft_day = ''
         @item.valid?
-        expect(@item.errors.full_messages).to include("Theft day can't be blank" )
+        expect(@item.errors.full_messages).to include("Theft day can't be blank")
       end
     end
   end

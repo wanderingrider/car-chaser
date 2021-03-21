@@ -1,0 +1,72 @@
+<%= render "shared/second-header" %>
+
+<%# 商品の概要 %>
+<div class="item-show">
+  <div class="item-box">
+    <h2 class="name">
+      情報提供者：
+      <%= @item.user.nickname %>
+    </h2>
+    <div class="item-img-content">
+      <%= image_tag @item.image ,class:"item-box-img" %>
+      
+      
+      
+    </div>
+    
+ 
+    <% if user_signed_in? %>
+      <% if current_user.id == @item.user.id %>
+       <%= link_to "商品の編集",edit_item_path(@item.id), method: :get, class: "item-red-btn" %>
+       <p class="or-text">or</p>
+       <%= link_to "削除", item_path(@item.id), method: :delete, class:"item-destroy" %>
+      <% end %>
+    <% end %>
+  
+    <div class="item-explain-box">
+      盗難状況:
+      <span><%= @item.description %></span>
+    </div>
+    <table class="detail-table">
+      <tbody>
+        <tr>
+          <th class="detail-item">車種名</th>
+          <td class="detail-value"><%= @item.information_name %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">盗難時の状況</th>
+          <td class="detail-value"><%= @item.description %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">盗難にあった日付</th>
+          <td class="detail-value"><%= @item.theft_day    %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">盗難にあった場所</th>
+          <td class="detail-value"><%= @item.theft_place.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">盗難にあった地域</th>
+          <td class="detail-value"><%= @item.prefecture.name %></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="option">
+      
+      
+    </div>
+  </div>
+  <%# /商品の概要 %>
+<% if user_signed_in? %>
+      <% if current_user.id == @item.user.id %>
+  <div class="comment-box">
+    <p class="map-display">地図情報を登録して頂けますとこちらに表示します.</p>
+    <%= link_to "GPS登録画面に移動する", '#',class:"item-red-btn"%>
+  </div>
+ <% end %> 
+ <% end %>
+  <%# 詳細ページで表示されている商品のカテゴリー名を表示しましょう %>
+  <%# //詳細ページで表示されている商品のカテゴリー名を表示しましょう %>
+</div>
+
+  <%= render "shared/footer" %>
