@@ -1,2 +1,0 @@
-class GpssController < ApplicationController
-end

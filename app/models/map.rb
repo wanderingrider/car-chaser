@@ -1,9 +1,6 @@
 class Map < ApplicationRecord
-  validates :address, presence: true
+  belongs_to :item
 
-  belongs_to :location
-  
-
-  geocoded_by :address
-  after_validation :geocode
+  geocoded_by :address 
+  after_validation :geocode, if: :address_changed? 
 end

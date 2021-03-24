@@ -1,8 +1,6 @@
 <%= render "shared/second-header" %>
 
-<%= form_with model: @map, url: item_maps_path, local: true do |f| %>
-
- 
+<%= form_with model: @map, url: item_map_path(@map.id), local: true do |f| %>
  <h4>住所</h4>
  <%= f.text_field :address, placeholder: "住所" %>
  <%= f.submit "登録する" %>

@@ -1,32 +1,47 @@
 class MapsController < ApplicationController
-    before_action :set_maps, only: [:create,:show]
+
+
+  def index
+    @map = map.all
+  end
 
   def new
     @map = Map.new
   end
-
-  def create
-    @map = Map.new(maps_params)
   
+    def create
+
+    @map = Map.new(map_params)
     if @map.save
-      redirect_to item_path
+      redirect_to  item_map_path(params[:item_id],@map[:id])
     else
       render :new
     end
-  end
-
+  end 
+  
   def show
-      @map = Map.find(params[:id])
-      gon.map = @map
+    @map = Map.find(params[:item_id])
+    gon.map = @map
+  end
+  
+  def edit
+    @map = Map.find(params[:item_id])
   end
 
-   private
+  def update
+    if @map.update(params[:id])
+      redirect_to item_map_path
+    else
+      render :edit
+    end
+  end
 
-   def maps_params
-    params.require(:map).permit(:address, :latitude, :longitude).merge( user_id: current_user.id)
-   end
+  private
+  
+  def map_params
+    params.require(:map).permit(:address,:latitude, :longitude).merge(item_id: params[:item_id], user_id: current_user.id)
+  end
 
-  def set_maps
-    @item = Item.find(params[:item_id])
-   end
-end
+ 
+
+  end

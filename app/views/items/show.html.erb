@@ -61,12 +61,15 @@
       <% if current_user.id == @item.user.id %>
   <div class="comment-box">
     <p class="map-display">地図情報を登録して頂けますとこちらに表示します.</p>
-    <%= link_to "GPS登録画面に移動する", '#',class:"item-red-btn"%>
+    <%= link_to "GPS登録画面に移動する",  new_item_map_path(@item.id),class:"item-red-btn"%>
   </div>
+
+  <%= link_to "登録した地図情報を確認する", item_map_path(@item.id), class: "map-information" %>
  <% end %> 
  <% end %>
   <%# 詳細ページで表示されている商品のカテゴリー名を表示しましょう %>
   <%# //詳細ページで表示されている商品のカテゴリー名を表示しましょう %>
 </div>
+
 
   <%= render "shared/footer" %>

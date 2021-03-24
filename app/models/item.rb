@@ -13,7 +13,7 @@ class Item < ApplicationRecord
 
   has_one_attached :image
   belongs_to       :user
-  has_one          :location
+  has_many          :maps
 
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :prefecture

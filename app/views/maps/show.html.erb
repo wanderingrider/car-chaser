@@ -1,31 +1,31 @@
-<div id="map"></div>
+ <%= render "shared/second-header" %>
 
-<style>
-#map{
-  height: 1000px;
-  width: 1000px;
-}
-</style>
+ <div class="map-content" >
 
-<script>
+  <div class="map-information", id="map"></div>
+
+
+
+<div class="map-element">
+  <script class="map-inforomation">
   let map;
 
   function initMap() {
-    // geocoderを初期化
+    
     geocoder = new google.maps.Geocoder()
 
     map = new google.maps.Map(document.getElementById('map'), {
-      // コントローラーで定義した変数から緯度経度を呼び出し、マップの中心に表示
+      
       center: {
         lat: gon.map.latitude,
         lng: gon.map.longitude
       },
-      // マップの倍率はお好みで
+      
       zoom: 17,
     });
 
     marker = new google.maps.Marker({
-      // コントローラーで定義した変数から緯度経度を呼び出し、マーカーを立てる
+      
       position: {
         lat: gon.map.latitude,
         lng: gon.map.longitude
@@ -33,8 +33,38 @@
       map: map
     });
   }
-</script>
+  </script>
+</div>
 
-<script async defer
+<div class="map description">
+<table class="registered-table">
+  <thead>
+    <tr>
+      <th class="registered_address">登録住所</th>
+    </tr>
+  </thead>
+  <tbody>  
+    <tr>
+      <td class="registered_location">地名: <%= @map.address %></td>
+    </tr>
+  </tbody>
+</table>
+
+  <div class="map-improvement">
+  <% if user_signed_in? %>
+      <% if current_user.id == @map.user_id %>
+       <%= link_to "地図情報の編集",edit_item_map_path(@map.id), method: :get, class: "map-red-btn" %>
+      <p class="map-while">or</p>
+       <%= link_to "削除", item_map_path(@map.id), method: :delete, class:"map-destroy" %>
+      <% end %>
+    <% end %>
+    </div>
+    </div>
+ </div>
+
+  <script async defer
       src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=<%= ENV['GOOGLE_MAP_API'] %>&callback=initMap">
-</script>
+  </script>
+ 
+
+<%= render "shared/footer" %>
