@@ -1,6 +1,6 @@
 <%= render "shared/second-header" %>
 
-<%# 商品の概要 %>
+
 <div class="item-show">
   <div class="item-box">
     <h2 class="name">
@@ -55,20 +55,17 @@
       
       
     </div>
-  </div>
-  <%# /商品の概要 %>
-<% if user_signed_in? %>
-      <% if current_user.id == @item.user.id %>
-  <div class="comment-box">
-    <p class="map-display">地図情報を登録して頂けますとこちらに表示します.</p>
-    <%= link_to "GPS登録画面に移動する",  new_item_map_path(@item.id),class:"item-red-btn"%>
-  </div>
 
+
+<% if user_signed_in? %>
+  <% if current_user.id == @item.user.id && @item.maps.blank? %>
+ <%= link_to "GPS登録画面に移動する",  new_item_map_path(@item.id),class:"item-red-btn"%>
+  <% else @map.blank? %>
   <%= link_to "登録した地図情報を確認する", item_map_path(@item.id), class: "map-information" %>
- <% end %> 
- <% end %>
-  <%# 詳細ページで表示されている商品のカテゴリー名を表示しましょう %>
-  <%# //詳細ページで表示されている商品のカテゴリー名を表示しましょう %>
+
+  <% end %> 
+  <% end %>
+</div>
 </div>
 
 

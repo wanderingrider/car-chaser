@@ -63,5 +63,15 @@
 }
 
 .map-while {
-  margin:10px;
+  margin:20px;
+
 }
+
+.map-back {
+  background-color:#A0522D;
+  color: white;
+  font-size: 25px;
+  padding: 10px;
+  border-radius: 3%;
+}
+

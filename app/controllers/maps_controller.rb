@@ -1,5 +1,5 @@
 class MapsController < ApplicationController
-
+  before_action :set_map, only: [:show, :edit, :update, :destroy ]
 
   def index
     @map = map.all
@@ -8,40 +8,44 @@ class MapsController < ApplicationController
   def new
     @map = Map.new
   end
-  
-    def create
 
+  def create
     @map = Map.new(map_params)
     if @map.save
-      redirect_to  item_map_path(params[:item_id],@map[:id])
+      redirect_to item_map_path(params[:item_id], @map[:id])
     else
       render :new
     end
-  end 
-  
+  end
+
   def show
-    @map = Map.find(params[:item_id])
     gon.map = @map
   end
-  
+
   def edit
-    @map = Map.find(params[:item_id])
   end
 
   def update
-    if @map.update(params[:id])
+    if @map.update(map_params)
       redirect_to item_map_path
     else
       render :edit
     end
+  end 
+
+  def destroy
+    @map.update(map_id = nil )
+    @map.destroy
+    redirect_to root_path
   end
 
   private
-  
+
+  def set_map
+    @map = Map.find(params[:item_id])
+  end
+
   def map_params
-    params.require(:map).permit(:address,:latitude, :longitude).merge(item_id: params[:item_id], user_id: current_user.id)
+    params.require(:map).permit(:address, :latitude, :longitude).merge(item_id: params[:item_id], user_id: current_user.id)
   end
-
- 
-
-  end
+end

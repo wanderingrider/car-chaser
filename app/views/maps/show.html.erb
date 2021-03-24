@@ -54,8 +54,9 @@
   <% if user_signed_in? %>
       <% if current_user.id == @map.user_id %>
        <%= link_to "地図情報の編集",edit_item_map_path(@map.id), method: :get, class: "map-red-btn" %>
-      <p class="map-while">or</p>
-       <%= link_to "削除", item_map_path(@map.id), method: :delete, class:"map-destroy" %>
+      <p class="map-while"></p>
+       <%#= link_to "削除", item_map_path(@map.id), method: :delete, class:"map-destroy" %>
+       <%= link_to "戻る", item_path, method: :get, class: "map-back" %>
       <% end %>
     <% end %>
     </div>
