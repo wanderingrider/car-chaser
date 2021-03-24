@@ -1,0 +1,33 @@
+.map-creation {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.map-part {
+ align-items: center;
+ margin-bottom: 250px;
+ background-color:#D2691E;
+ padding:50px 200px;
+ border-radius: 3%;
+}
+
+.map-input {
+  font-size: 30px;
+  color:floralwhite;
+  margin-bottom: 10px;
+}
+
+.map-text {
+  width:25vw;
+  height: 5vh;
+}
+
+.map-btn {
+  background-color: #ea352d;
+  color: white;
+  text-align: none;
+  padding: 5px 10px 5px 10px;
+
+}

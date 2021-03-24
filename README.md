@@ -14,27 +14,46 @@
 | read_last_name      | string  | null:false                |
 
 ### Association
-- has_many :items
-- has_many :maps
+- has_many  :items
+- belongs_to :location
 
 ## itemsテーブル
 
 | Column             | Type       |     Options                    |
 | ---------------    | ---------- | ------------------------------ |
 | information_name   | string     | null: false                    |
+| description        | text       | null: false                    |
 | theft_day          | date       | null: false                    |
 | prefecture_id      | integer    | null: false                    | 
+| theft_place_id     | integer    | null: false                    |
 | user               | references | null: false, foreign_key: true |
 
 ### Association
 -belongs_to :user
- 
+-has_one :location
 
- ## mapsテーブル
+## locations テーブル
 
-| Column             | Type     |     Options               |
-| ------------------ | -------- | ------------------------- |                       
-| text               | text     | null:false                |
+
+| Column             | Type       |     Options                    |
+| ------------------ | --------   | -------------------------      |      
+| user               | references | null: false, foreign_key: true |
+| item               | references | null: false, foreign_key: true |
 
 ### Association
-- belongs_to :user
+-belongs_to :user
+-belongs_to :item
+-has_one    :map
+ 
+ ## mapsテーブル
+
+| Column             | Type       |     Options                    |
+| ------------------ | --------   | -------------------------      |                       
+|address             | string     | null: false                    |
+| latitude           | float      | null: false                    |
+| longitude          | float      | null: false                    |
+| user               | references | null: false, foreign_key: true |
+| item               | references | null: false, foreign_key: true |
+
+### Association
+- belongs_to :gps

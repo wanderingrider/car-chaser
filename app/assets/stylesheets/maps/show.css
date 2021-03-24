@@ -1,0 +1,77 @@
+#map{
+  height: 1000px;
+  width: 1000px;
+}
+
+.map-content{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  padding:30px;
+  background-color:  #FFF;
+  margin: 0 60px;
+}
+
+.registered-table{
+  margin-left: 50px;
+  border: 1px solid #dedede;
+  width: 35vh;
+  margin-right:50px;
+
+}
+
+
+.registered_address{
+  background-color:darkolivegreen;
+  color: white;
+  height:60px;
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.registered_location {
+  background-color: dimgrey;
+  color:white;
+  text-align: center;
+  font-weight: bold;
+  height: 50px;
+}
+
+.map-improvement {
+  margin-left: 50px;
+  margin-top:100px;
+  
+}
+
+
+.map-red-btn {
+  background-color: #ea352d;
+  color: white;
+  font-size: 25px;
+  padding:10px;
+  margin-bottom: 100px;
+  border-radius: 3%;
+}
+
+.map-destroy {
+  background-color: #ea352d;
+  color: white;
+  font-size: 25px;
+  padding:10px;
+  border-radius: 3%;
+}
+
+.map-while {
+  margin:20px;
+
+}
+
+.map-back {
+  background-color:#A0522D;
+  color: white;
+  font-size: 25px;
+  padding: 10px;
+  border-radius: 3%;
+}
+

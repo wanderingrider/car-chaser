@@ -1,11 +1,11 @@
 .wrapper{
   display: flex;
   max-height: 100vh - 20vh;
-  margin-top: 15vh;
+  
 }
 
 .feature-contents{
-  height: 100vh;
+  
   position: relative;
 }
 
@@ -26,21 +26,21 @@
 .title-contents {
   position: absolute;
   top: 50px;
-  left: 60px;
+  left: 550px;
   color: white;
   font-weight: bold;
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
-  opacity: 0.８;
 }
 
 .service-title {
-  font-size: 45px
+  font-size: 55px;
+  opacity: 0.9;
 }
 
 
 .sub-title{
   font-size: 25px;
-
+  margin-left: 50px;
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
 }
 
@@ -55,13 +55,6 @@
 .menu-pict{
   width: 300px;
   height: 20vh;
-}
-
-.side_bar{
-  background: linear-gradient(#228B22, #2E8B57);
-  width: 300px;
-  height: 100vh;
-  margin: 0px 15px 5px 15px;
 }
 
 .list-choise{
