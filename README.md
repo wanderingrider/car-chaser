@@ -30,20 +30,8 @@
 
 ### Association
 -belongs_to :user
--has_one :location
+-has_one :map
 
-## locations テーブル
-
-
-| Column             | Type       |     Options                    |
-| ------------------ | --------   | -------------------------      |      
-| user               | references | null: false, foreign_key: true |
-| item               | references | null: false, foreign_key: true |
-
-### Association
--belongs_to :user
--belongs_to :item
--has_one    :map
  
  ## mapsテーブル
 
@@ -56,4 +44,4 @@
 | item               | references | null: false, foreign_key: true |
 
 ### Association
-- belongs_to :gps
+- belongs_to :item
