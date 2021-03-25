@@ -14,11 +14,6 @@ Car Chaser
 現在、車の盗難に万が一遭遇してしまった場合、ほとんどの場合持ち主の元に返ってこない問題を解決に役立てるアプリを制作したいと制作しました。
 
 ## DEMO
-![Uploading Car.chaser![car-chase画像](https://user-images.githubusercontent.com/78330447/112422438-3c296280-8d74-11eb-923c-14d9db4b52df.jpg)
- gps画像.jpg…]()
-
-
-
 
 ## 工夫したポイント
 
