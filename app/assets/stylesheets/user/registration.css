@@ -9,7 +9,7 @@
   margin-bottom: 20px;
 }
 
-/* form-wrapは商品購入画面でも使用しています */
+
 .form-wrap {
   width: 50%;
   background-color: white;
@@ -162,4 +162,24 @@
   color: #0099e8;
   text-align: right;
   cursor: pointer;
+}
+
+@media (max-width:599px) {
+  .registration-main {
+    width: 100%;
+    min-width:600px;
+    height: 100%;
+    background-color: #DCDCDC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .form-wrap {
+    width: 50%;
+    background-color: white;
+    padding-bottom: 70px;
+  }
+  
 }
