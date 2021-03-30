@@ -31,3 +31,19 @@
   padding: 5px 10px 5px 10px;
 
 }
+
+@media (max-width: 599px) {
+  .map-input {
+    font-size: 20px;
+    color:floralwhite;
+    margin-bottom: 10px;
+  }
+  
+  .map-part {
+    align-items: center;
+    margin-bottom: 250px;
+    background-color:#D2691E;
+    padding: 5px 5px;
+    border-radius: 3%;
+   }
+}
