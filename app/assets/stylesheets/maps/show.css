@@ -75,3 +75,22 @@
   border-radius: 3%;
 }
 
+@media (max-width: 599px) {
+
+  .map-content{
+    display: flex;
+    justify-content:center;
+    flex-direction: column;
+    align-items: center;
+    padding:30px;
+    background-color:  #FFF;
+    margin: 0 60px;
+  }
+  
+  #map{
+    height: 350px;
+    width: 350px;
+    margin-bottom: 30px;
+  }
+
+}
