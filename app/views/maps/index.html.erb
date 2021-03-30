@@ -1,3 +1,71 @@
-<% @map.each do |map| %>
-  <%= link_to '詳細', place_path(map.id), method: :get  %>
- <% end %>
+ <%= render "shared/second-header" %>
+
+ <div class="map-content" >
+
+  <div class="map-information", id="map"></div>
+
+
+
+<div class="map-element">
+  <script class="map-inforomation">
+  let map;
+
+  function initMap() {
+    
+    geocoder = new google.maps.Geocoder()
+
+    map = new google.maps.Map(document.getElementById('map'), {
+      
+      center: {
+        lat: gon.map.latitude,
+        lng: gon.map.longitude
+      },
+      
+      zoom: 17,
+    });
+
+    marker = new google.maps.Marker({
+      
+      position: {
+        lat: gon.map.latitude,
+        lng: gon.map.longitude
+      },
+      map: map
+    });
+  }
+  </script>
+</div>
+
+<div class="map description">
+<table class="registered-table">
+  <thead>
+    <tr>
+      <th class="registered_address">登録住所</th>
+    </tr>
+  </thead>
+  <tbody>  
+    <tr>
+      <td class="registered_location">地名: <%= @map.address %></td>
+    </tr>
+  </tbody>
+</table>
+
+  <div class="map-improvement">
+  <% if user_signed_in? %>
+      <% if current_user.id == @map.user_id %>
+       <%#= link_to "地図情報の編集",edit_item_map_path(@map.id), method: :get, class: "map-red-btn" %>
+      <p class="map-while"></p>
+       <%#= link_to "削除", item_map_path(@map.id), method: :delete, class:"map-destroy" %>
+       <%= link_to "戻る", root_path, method: :get, class: "map-back" %>
+      <% end %>
+    <% end %>
+    </div>
+    </div>
+ </div>
+
+  <script async defer
+      src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=<%= ENV['GOOGLE_MAP_API'] %>&callback=initMap">
+  </script>
+ 
+
+<%= render "shared/footer" %>

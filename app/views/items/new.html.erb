@@ -93,28 +93,28 @@
         <%= f.collection_select(:theft_place_id, TheftPlace.all, :id, :name, {class:"select-box", id:"item-theft-place"}) %>
 
       <div class="weight-told-text">
-          盗難にあった地域（MAP情報も合わせて掲載できます。）
+          盗難にあった地域
           <span class="indispensable">必須</span>
       </div>
         <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {class:"select-box", id:"item-prefecture"}) %>
-    
-    </div>
+      </div>
+
+     
    </div>  
 
       <div class="caution">
 
       <p class="sentence">
-        <a href="#">禁止されている情報、</a>
-        <a href="#">行為</a>
-        を必ずご確認ください。
-
+       地図情報を登録画面に遷移します。
+       <br>
+       こちらもあわせてご登録ください。
         </p>
       </div>
   
 
     
     <div class="sell-btn-contents">
-      <%= f.submit "提供する" ,class:"sell-btn" %>
+      <%= f.submit "地図情報登録画面に遷移する" ,class:"sell-btn" %>
       <%=link_to 'もどる', root_path, class:"back-btn" %>
     </div>
     

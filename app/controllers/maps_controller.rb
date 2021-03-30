@@ -1,15 +1,18 @@
 class MapsController < ApplicationController
-  before_action :set_map, only: [:show, :edit, :update, :destroy ]
+  before_action :set_map, only: [  :edit, :update]
 
   def index
-    @map = map.all
+    @map = Map.joins(:items)
+    gon.map = @map
   end
 
   def new
+    @map = Map.joins(:item).select("item_id")
     @map = Map.new
   end
 
   def create
+    @map = Map.joins(:items)
     @map = Map.new(map_params)
     if @map.save
       redirect_to item_map_path(params[:item_id], @map[:id])
@@ -19,6 +22,8 @@ class MapsController < ApplicationController
   end
 
   def show
+    @map = Map.joins(:items).select("item_id","map_id")
+    @map = Map.find(params[:id])
     gon.map = @map
   end
 
@@ -26,7 +31,7 @@ class MapsController < ApplicationController
   end
 
   def update
-    if @map.update(map_params)
+    if @map.update(map_params) 
       redirect_to item_map_path
     else
       render :edit
@@ -34,7 +39,8 @@ class MapsController < ApplicationController
   end 
 
   def destroy
-    @map.update(map_id = nil )
+    @map = Map.joins(:item)
+    @map = Map.find(params[:item_id],[:map_id])
     @map.destroy
     redirect_to root_path
   end

@@ -15,7 +15,7 @@ class ItemsController < ApplicationController
     @item = Item.new(item_params)
 
     if @item.save
-      redirect_to root_path
+      redirect_to new_item_map_path(@item.id)
     else
       render :new
     end
