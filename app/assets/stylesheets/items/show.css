@@ -205,7 +205,7 @@
 
 .map-display {
   margin-bottom: 15px;
- }
+}
 
 .map-btn2 {
   font-size: 24px;
@@ -225,7 +225,7 @@
     padding: 10vh 15vw;
     display: flex;
     flex-direction: column;
-  
+  }
   }
 
   @media (max-width:599px) {

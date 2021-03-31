@@ -1,5 +1,5 @@
 class MapsController < ApplicationController
-  before_action :set_map, only: [  :edit, :update]
+  before_action :set_map, only: [:edit, :update]
 
   def index
     @map = Map.joins(:items)
@@ -7,7 +7,7 @@ class MapsController < ApplicationController
   end
 
   def new
-    @map = Map.joins(:item).select("item_id")
+    @map = Map.joins(:item).select('item_id')
     @map = Map.new
   end
 
@@ -31,16 +31,16 @@ class MapsController < ApplicationController
   end
 
   def update
-    if @map.update(map_params) 
+    if @map.update(map_params)
       redirect_to item_map_path
     else
       render :edit
     end
-  end 
+  end
 
   def destroy
     @map = Map.joins(:item)
-    @map = Map.find(params[:item_id],[:map_id])
+    @map = Map.find(params[:item_id], [:map_id])
     @map.destroy
     redirect_to root_path
   end
