@@ -22,7 +22,7 @@ class MapsController < ApplicationController
   end
 
   def show
-    @map = Map.joins(:items).select("item_id","map_id")
+    @map = Map.joins(:items)
     @map = Map.find(params[:id])
     gon.map = @map
   end
