@@ -1,25 +1,13 @@
-.footer2{
-  min-height: 15vh;
+.full-page{
   position: relative;
-  padding-bottom: 120px;
-  box-sizing: border-box;
-}
-
-.footer{
-
-  width: 100vw;
-  background-color: #696969;
-  text-align: center;
-  display: flex;
-  text-align: center;
-  justify-content: flex-end;
-  position: absolute;
-  bottom: 0; 
 }
 
 
 .car-chaser-contents {
-  margin-right: 18vh;
+  background-color: #696969;
+  width: 100vw;
+  bottom:0;
+  margin-top: 300px;
 }
 .footer-link {
   color:white;
@@ -31,7 +19,7 @@
 }
 
 @media (max-width: 599px) {
-  .footer {
+  .car-chaser-contents{
     width: 100%;
     background-color: #696969;
     text-align: center;
@@ -39,5 +27,6 @@
     justify-content: flex-end;
     position: fixed;
     bottom: 0;
+    font-size: 5px;
   }
 }
