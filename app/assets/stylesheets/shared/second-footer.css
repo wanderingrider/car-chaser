@@ -3,11 +3,9 @@
   width: 100vw;
   background-color: #696969;
   text-align: center;
-  display: flex;
   text-align: center;
   justify-content: flex-end;
   margin-top: auto;
-  position: fixed;
     bottom: 0;
 }
 
