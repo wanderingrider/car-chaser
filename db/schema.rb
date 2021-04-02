@@ -40,7 +40,6 @@ ActiveRecord::Schema.define(version: 2010_03_42_051420) do
     t.integer "theft_place_id", null: false
     t.integer "prefecture_id", null: false
     t.bigint "user_id", null: false
-    t.integer "map_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_items_on_user_id"
