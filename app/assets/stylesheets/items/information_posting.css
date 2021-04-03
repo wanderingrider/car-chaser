@@ -30,8 +30,7 @@
   margin-right: 5px;
 }
 .item-img {
-  width: 35vh;
-  height: 33vh;
+  width: 40vh;
 }
 
 .item-name {
@@ -49,3 +48,9 @@
 a {
   text-decoration: none;
 }
+
+.item-img-content{
+  max-height: 100%;
+  max-width:100%;
+}
+
