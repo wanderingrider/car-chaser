@@ -56,6 +56,20 @@
       
     </div>
 
+<% if user_signed_in? %>
+  <%= form_with model: [@item, @comment], local: true  do |f| %> 
+  <%= f.text_area :text, placeholder: "目撃情報を提供する", class: "comment-text" %>
+  <%= f.submit "SEND" ,class: "comment-btn" %>
+  <% end %>
+<% end %>
+
+<div class="comments">
+  <h4>現在寄せられてる情報一覧</H4>
+  <% @comments.each do |comment| %>
+      <strong>comment.user.name</strong>
+      <%= comment.text %>
+  <% end %>
+
 
 <% if user_signed_in? %>
   <%= link_to "登録した地図情報を確認する", item_map_path(:id), class: "map-btn2" %>
