@@ -66,10 +66,11 @@
 <div class="comments">
   <h4>現在寄せられてる情報一覧</H4>
   <% @comments.each do |comment| %>
-      <strong>comment.user.name</strong>
+    <h5><strong><%= comment.user.nickname %></strong><h5>
+      <%= comment.created_at.to_s(:datetime) %>
       <%= comment.text %>
   <% end %>
-
+</div>
 
 <% if user_signed_in? %>
   <%= link_to "登録した地図情報を確認する", item_map_path(:id), class: "map-btn2" %>
