@@ -104,7 +104,7 @@ Html, JavaScript
 
 ### Association
 - has_many  :items
-- belongs_to :location
+- has_many  :comments
 
 ## itemsテーブル
 
@@ -118,19 +118,32 @@ Html, JavaScript
 | user               | references | null: false, foreign_key: true |
 
 ### Association
--belongs_to :user
--has_many :maps
+- belongs_to :user
+- has_many :maps
+- has_many :comments
 
  
  ## mapsテーブル
 
 | Column             | Type       |     Options                    |
 | ------------------ | --------   | -------------------------      |                       
-|address             | string     | null: false                    |
+| address             | string     | null: false                   |
 | latitude           | float      | null: false                    |
 | longitude          | float      | null: false                    |
 | user               | references | null: false, foreign_key: true |
 | item               | references | null: false, foreign_key: true |
 
 ### Association
+- belongs_to :item
+
+## commentsテーブル
+
+| Column             | Type       |     Options                    |
+| ------------------ | --------   | -------------------------      |                       
+| text               | text       | null: false                    |
+| user               | references | null: false                    |
+| item               | references | null: false                    |
+
+### Association
+- belongs_to :user
 - belongs_to :item
