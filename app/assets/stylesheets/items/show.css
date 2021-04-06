@@ -56,6 +56,7 @@
   color: #FFF;
   margin: 20px 0px;
   padding: 2vh 5vw;
+  border-radius: 10px;
 }
 
 .or-text {
@@ -70,6 +71,7 @@
   color: black;
   margin: 20px 0px;
   padding: 2vh 5vw;
+  border-radius: 10px;
 }
 
 .item-explain-box {
@@ -162,14 +164,15 @@
 
 .comment-btn {
   line-height: 48px;
-  background-color: #3CCACE;
-  border: 1px solid #3CCACE;
+  background-color: darkolivegreen;
+  border: 1px solid darkolivegreen;
   color: #fff;
   width: 50%;
   min-width: 150px;
   font-size: 18px;
   border-radius: 100px;
   margin-bottom: 2vh;
+  justify-self: center;
 }
 
 .comment-flag {
@@ -213,8 +216,21 @@
   font-weight: bold;
   text-align: center;
   color:white;
-  border-radius: 3%;
+  border-radius:  10px;
   background-color: #ea352d;
+}
+
+.comments {
+  background-color: ghostwhite;
+}
+
+.comment-name{
+  color :lightseagreen;
+}
+
+.comment-title {
+  font-size: 20px;
+  font-weight: bold;
 }
 
 @media (max-width:1024px) {

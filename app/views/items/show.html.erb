@@ -56,6 +56,7 @@
       
     </div>
 
+<div class="comment-box">
 <% if user_signed_in? %>
   <%= form_with model: [@item, @comment], local: true  do |f| %> 
   <%= f.text_area :text, placeholder: "目撃情報を提供する", class: "comment-text" %>
@@ -64,14 +65,17 @@
 <% end %>
 
 <div class="comments">
-  <h4>現在寄せられてる情報一覧</H4>
+  <h4 class="comment-title">＜現在寄せられてる情報一覧＞</H4>
   <% @comments.each do |comment| %>
-    <h5><strong><%= comment.user.nickname %></strong><h5>
-      <%= comment.created_at.to_s(:datetime) %>
-      <%= comment.text %>
+  <p>
+    <strong class="comment-name"><%= comment.user.nickname %></strong>
+      <%= "日付: #{comment.created_at.to_s(:datetime)}" %>:
+       <%= comment.text %>
   <% end %>
+  </p>
 </div>
 
+</div>
 <% if user_signed_in? %>
   <%= link_to "登録した地図情報を確認する", item_map_path(:id), class: "map-btn2" %>
 <% end %>
