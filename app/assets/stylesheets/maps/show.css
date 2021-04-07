@@ -51,15 +51,7 @@
   font-size: 25px;
   padding:10px;
   margin-bottom: 100px;
-  border-radius: 3%;
-}
-
-.map-destroy {
-  background-color: #ea352d;
-  color: white;
-  font-size: 25px;
-  padding:10px;
-  border-radius: 3%;
+  border-radius: 10px;
 }
 
 .map-while {
@@ -72,7 +64,7 @@
   color: white;
   font-size: 25px;
   padding: 10px;
-  border-radius: 3%;
+  border-radius: 10px;
 }
 
 @media (max-width: 599px) {
