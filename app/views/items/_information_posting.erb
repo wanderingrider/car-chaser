@@ -1,7 +1,8 @@
 <div class='item-contents'>
   <h1 class='title'>新規盗難情報一覧</h1>
+    <%= will_paginate @items  %>
   <ul class=item-lists>
-    <% @item.each do |item| %>
+    <% @items.each do |item| %>
     <li class='list'>
         <%= link_to item_path(item.id),class: "details-contents" do %>
         <div class='item-img-content'>
@@ -10,14 +11,14 @@
         <div class='item-info'>
             <h3 class='item-name'>
             [車種名]:
-            <%= item.information_name %>
+            <%= items.information_name %>
             </h3>
           <div class='theft_day'>
             <h3 class='item-name'>
-              [盗難日]：<%= item.theft_day %>
+              [盗難日]：<%= items.theft_day %>
             </h3>
             <h3 class="item-name">
-              [ユーザー名]: <%= item.user.nickname %>
+              [ユーザー名]: <%= items.user.nickname %>
             </h3> 
             </div>
           </div>
@@ -25,7 +26,7 @@
         <% end %>
       </li> 
 
-      <% if @item.length == 0 %>
+      <% if @items.length == 0 %>
         <li class='list'>
         <%= image_tag "fiat-1754723_1920.jpg", class: "item-img" %>
         <div class='item-info'>
@@ -46,4 +47,5 @@
 
 
   </ul> 
+<%= will_paginate %>
 </div>
