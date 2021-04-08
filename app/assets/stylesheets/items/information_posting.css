@@ -54,3 +54,27 @@ a {
   max-width:100%;
 }
 
+.current   {
+  display: inline;
+padding:10px 15px;
+border:1px #ccc solid;color:#000053;
+border-radius: 5px / 5px;
+}
+
+.current a:hover {color: #fff;text-decoration: none;background-color: #006400;}
+
+.pagination a {
+  display: inline;
+  padding:10px 15px;
+  border:1px #ccc solid;color:#000053;
+  border-radius: 5px / 5px;
+}
+
+.pagination a:hover {color: #fff;text-decoration: none;background-color: #006400;}
+
+.previous_page  {
+  display: inline;
+  padding:10px 15px;
+  border:1px #ccc solid;color:#000053;
+  border-radius: 5px / 5px;
+}
