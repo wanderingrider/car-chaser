@@ -1,6 +1,7 @@
 <div class='item-contents'>
   <h1 class='title'>新規盗難情報一覧</h1>
-    <%= will_paginate @items  %>
+  <%= will_paginate(@items,renderer: WillPaginate::ActionView::BootstrapLinkRenderer) %>
+  
   <ul class=item-lists>
     <% @items.each do |item| %>
     <li class='list'>
@@ -11,14 +12,14 @@
         <div class='item-info'>
             <h3 class='item-name'>
             [車種名]:
-            <%= items.information_name %>
+            <%= item.information_name %>
             </h3>
           <div class='theft_day'>
             <h3 class='item-name'>
-              [盗難日]：<%= items.theft_day %>
+              [盗難日]：<%= item.theft_day %>
             </h3>
             <h3 class="item-name">
-              [ユーザー名]: <%= items.user.nickname %>
+              [ユーザー名]: <%= item.user.nickname %>
             </h3> 
             </div>
           </div>
@@ -47,5 +48,5 @@
 
 
   </ul> 
-<%= will_paginate %>
+  <%= will_paginate(@items,renderer: WillPaginate::ActionView::LinkRenderer) %>
 </div>
