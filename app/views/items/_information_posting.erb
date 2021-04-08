@@ -1,6 +1,6 @@
 <div class='item-contents'>
   <h1 class='title'>新規盗難情報一覧</h1>
-  <%= will_paginate(@items,renderer: WillPaginate::ActionView::BootstrapLinkRenderer) %>
+  
   
   <ul class=item-lists>
     <% @items.each do |item| %>
@@ -48,5 +48,5 @@
 
 
   </ul> 
-  <%= will_paginate(@items,renderer: WillPaginate::ActionView::LinkRenderer) %>
+<%= will_paginate(@items, :renderer => WillPaginate::ActionView::LinkRenderer) %>
 </div>
