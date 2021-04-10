@@ -19,4 +19,13 @@ class Item < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :prefecture
   belongs_to :theft_place
+
+  def self.search(search)
+    if search != ""
+      Item.where('information_name LIKE(?)', "%#{search}%")
+    else
+      Item.all
+    end
+  end
+
 end

@@ -6,6 +6,7 @@
 <div class="feature-contents">
   <div class="title-contents">
     <h2 class="service-title">あなたの車を取り戻そう</h2><br><h2 class="sub-title">車の盗難情報を共有するアプリです。</h2>
+     <li><%= link_to '情報一覧', search_items_path, class: "category-list" %></li>
   </div>
   </div>
 
@@ -14,6 +15,9 @@
 
   <div class="item-contents">
     <%= render "information_posting" %>
+    <div class="page-content">
+<%= will_paginate(@items, :renderer => WillPaginate::ActionView::LinkRenderer) %>
+</div>
   </div>
 
 </div>
@@ -25,6 +29,7 @@
 <% end %>
 
 </div>
+
 
 <div class="footer">
 <%= render "shared/footer" %>

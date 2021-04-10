@@ -124,8 +124,10 @@ html{
   width: 100%;
 }
 
-
-
+.page-content {
+  position: absolute;
+  bottom:0;
+}
 
 @media (max-width: 1024px) {
   .inner {
