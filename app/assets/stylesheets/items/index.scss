@@ -20,18 +20,23 @@
 }
 
 .information-list {
-    width: 120px;
-    margin-top: 40vh;
-    background-color: red;
-    margin-left: 30px;
-    border-radius: 10px;
+    display: flex;
 }
 
 .information-btn-text{
+  width:300px;
+  text-align: center;
   font-weight: bold;color: white;
   font-size: 30px;
   display: block;
+  background-color: red;
+  border-radius:10px;
+  margin-top: 400px;
+  margin-left: 40px;
+  padding: 10px;
 }
+
+.information-btn-text:hover{opacity: 0.9; background-color: red;}
 
 .service-title {
   font-size: 55px;
@@ -135,33 +140,36 @@ html{
   width: 100%;
 }
 
+.page-content {
+margin-top:200px;
+display: flex;
+position: absolute;
+bottom:100px;}
 
-
-.search-form {
-  display: flex;
-  text-align: center;
-  padding-top: 32px;
-  justify-content: center;
+.current   {
+  display: inline;
+padding:10px 15px;
+border:1px #ccc solid;color:#000053;
+border-radius: 5px / 5px;
 }
 
-.search-form .search-input {
-  width: 25vw;
-  height: 5vh;
-  margin-right: 10px;
+.current a:hover {color: #fff;text-decoration: none;background-color: #006400;}
+
+.pagination a {
+  display: inline;
+  padding:10px 15px;
   border:1px #ccc solid;color:#000053;
-  border-radius: 3px;
+  border-radius: 5px / 5px;
 }
 
-.search-form .search-btn {
-  width: 15%;
+.pagination a:hover {color: #fff;text-decoration: none;background-color: #006400;}
+
+.previous_page  {
+  display: inline;
+  padding:10px 15px;
   border:1px #ccc solid;color:#000053;
-  background-color: #3CB371;
-  border-radius: 5px;
-  color: white;
+  border-radius: 5px / 5px;
 }
-
-.search-form .search-btn:hover {color: #fff;text-decoration: none;background-color: #006400;}
-
 
 @media (max-width: 1024px) {
   .inner {

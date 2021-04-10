@@ -1,12 +1,10 @@
 <header class='top-page-header'>
 <div class='nav'>
     <ul class='lists-left'>
-      <li><%= link_to 'CAR CHASER', root_path, class: "category-list" %></li>
+      <li><%= link_to 'CAR CHASER',root_path, class: "category-list" %></li>
     </ul>
-
-   
-
     <ul class='lists-right'>
+      
     <% if user_signed_in? %>
       <li><%= link_to current_user.nickname, "#", class: "user-nickname" %></li> 
       <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li> 
