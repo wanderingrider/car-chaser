@@ -1,0 +1,10 @@
+.top-btn  {
+  font-size: 24px;
+    padding: 2vh 2vw;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    border-radius: 10px;
+    background-color: #ea352d;
+}
+

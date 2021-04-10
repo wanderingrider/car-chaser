@@ -1,3 +1,5 @@
+<%= render "shared/header" %>
+
 <div class='item-contents'>
   <h1 class='title'>新規盗難情報一覧</h1>
 
@@ -43,14 +45,7 @@
             </div>
         </div>
       </li>
-      
-    <%end %>
-
-
-    
-
-
-
-  </ul> 
-
+      <%end %>
+      </ul>
+      <%= link_to 'トップへ戻る', root_path, class: "top-btn" %>
 </div>
