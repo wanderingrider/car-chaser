@@ -62,7 +62,7 @@ a {
 }
 
 .search-form .search-input {
-  width: 25vw;
+  width: 330px;
   height: 5vh;
   margin-right: 10px;
   border:1px #ccc solid;color:#000053;
@@ -70,7 +70,7 @@ a {
 }
 
 .search-form .search-btn {
-  width: 15%;
+  width: 60px;
   border:1px #ccc solid;color:#000053;
   background-color: #3CB371;
   border-radius: 5px;

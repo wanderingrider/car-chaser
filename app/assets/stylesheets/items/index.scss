@@ -142,8 +142,8 @@ html{
 
 .page-content {
 margin-top:200px;
-display: flex;
-position: absolute;
+bottom:0;
+text-align: center;
 bottom:100px;}
 
 .current   {
@@ -155,11 +155,14 @@ border-radius: 5px / 5px;
 
 .current a:hover {color: #fff;text-decoration: none;background-color: #006400;}
 
+.pagination {
+  justify-content: center;
+}
 .pagination a {
   display: inline;
   padding:10px 15px;
   border:1px #ccc solid;color:#000053;
-  border-radius: 5px / 5px;
+  border-radius: 5px / 5px;;
 }
 
 .pagination a:hover {color: #fff;text-decoration: none;background-color: #006400;}
@@ -171,7 +174,7 @@ border-radius: 5px / 5px;
   border-radius: 5px / 5px;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1500px) {
   .inner {
     margin: 0 auto;
   }
@@ -179,9 +182,35 @@ border-radius: 5px / 5px;
   .title-contents {
     font-size: 24px;
 }
+
+.page-content {
+ margin-top:1000px;
+bottom:0;
+text-align: center;
+bottom:100px;}
+    
 }
 
-@media (max-width: 599px) {
+
+@media (max-width: 1170px) {
+  .inner {
+    margin: 0 auto;
+  }
+
+  .title-contents {
+    font-size: 24px;
+  }
+
+  .page-content {
+    margin-top:1500px;
+    bottom:0;
+    text-align: center;
+    bottom:100px;}
+    
+}
+
+
+@media (max-width: 820px) {
 
   .service-title {
     font-size: 35px;
@@ -191,5 +220,10 @@ border-radius: 5px / 5px;
   font-size: 30px;
 }
 
+.page-content {
+  margin-top:3000px;
+  bottom:0;
+  text-align: center;
+  bottom:100px;}
 
 }

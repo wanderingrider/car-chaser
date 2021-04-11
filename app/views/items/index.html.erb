@@ -17,12 +17,10 @@
 
   <div class="item-contents">
     <%= render "information_posting" %>
-    <div class="page-content">
-<%= will_paginate(@items, :renderer => WillPaginate::ActionView::LinkRenderer) %>
-</div>
+  
   </div>
 
-</div>
+
 
 
 <%= link_to(new_item_path, class: 'purchase-btn') do %>
@@ -31,9 +29,11 @@
 <% end %>
 
 </div>
-
-
+  
 <div class="footer">
+<div class="page-content">
+<%= will_paginate(@items, :renderer => WillPaginate::ActionView::LinkRenderer) %>
+</div>
 <%= render "shared/footer" %>
 </div>
 </div>
