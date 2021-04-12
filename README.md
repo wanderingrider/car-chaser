@@ -48,8 +48,7 @@ https://car-chaser.herokuapp.com/
    地名を入力して頂きますと地図詳細画面に遷移します。
 
    ### 地図詳細ページ
-  [![Image from Gyazo](https://i.gyazo.com/c37b7e903b317e4e6dfd5151295a0a77.jpg)](https://gyazo.com/c37b7e903b317e4e6dfd5151295a0a77)
-
+  [![Image from Gyazo](https://i.gyazo.com/41fe28cd74138b8804c10cfdc07e6695.jpg)](https://gyazo.com/41fe28cd74138b8804c10cfdc07e6695)
   入力して頂いた情報から地図を表示します。
   また、編集ができます。登録後はトップ→詳細画面→地図詳細ページの順で遷移できます。
  
