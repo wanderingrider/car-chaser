@@ -29,7 +29,10 @@ https://car-chaser.herokuapp.com/
 ## DEMO
 
   ### トップページ
-  [![Image from Gyazo](https://i.gyazo.com/44d4a3ad5e4292228b5317c83448ee76.jpg)](https://gyazo.com/44d4a3ad5e4292228b5317c83448ee76)
+  [![Image from Gyazo](https://i.gyazo.com/098af3175a919f2e3b6aafb50740d974.jpg)](https://gyazo.com/098af3175a919f2e3b6aafb50740d974)
+
+  
+  [![Image from Gyazo](https://i.gyazo.com/ee997b50ae12d4a3946444f05ad27135.jpg)](https://gyazo.com/ee997b50ae12d4a3946444f05ad27135)
 
   ログインした状態で提供するボタンを押して頂きますと提供画面に遷移します。
   こちらに提供して頂いた情報を表示します。
@@ -73,6 +76,14 @@ Ruby, Ruby on rails
 
 Html, JavaScript
 
+## 機能
+- ログイン・ログアウト機能
+- 一覧表示機能
+- コメント機能
+- 地図情報表示
+- 検索機能
+- ページネーション
+- 詳細・編集・削除
 
 ## 課題や今後実装したい機能
 
@@ -82,7 +93,6 @@ Html, JavaScript
   - ページの読み込みが少し遅い。
 
   ## 実装したい機能
-  - 一覧表示をページ制にする。それに伴って検索機能も実装する。
   - インフラをAWSに変更する
   - 一つ一つの投稿に対して地図情報を載せるか選択できるようにする。
 
