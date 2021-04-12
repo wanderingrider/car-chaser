@@ -32,8 +32,7 @@ https://car-chaser.herokuapp.com/
   [![Image from Gyazo](https://i.gyazo.com/098af3175a919f2e3b6aafb50740d974.jpg)](https://gyazo.com/098af3175a919f2e3b6aafb50740d974)
 
   ### 情報一覧
-  [![Image from Gyazo](https://i.gyazo.com/ee997b50ae12d4a3946444f05ad27135.jpg)](https://gyazo.com/ee997b50ae12d4a3946444f05ad27135)
-
+  [![Image from Gyazo](https://i.gyazo.com/e7f58a5a9aecc15a5f800b9bda1409aa.jpg)](https://gyazo.com/e7f58a5a9aecc15a5f800b9bda1409aa)
   ログインした状態で提供するボタンを押して頂きますと提供画面に遷移します。
   こちらに提供して頂いた情報を表示します。
 
