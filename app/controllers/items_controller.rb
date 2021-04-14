@@ -12,13 +12,15 @@ class ItemsController < ApplicationController
   end
 
   def create
+    ActiveRecord::Base.transaction do
     @item = Item.new(item_params)
 
-    if @item.save
+    if @item.save!
       redirect_to new_item_map_path(@item.id)
     else
       render :new
     end
+  end
   end
 
   def show

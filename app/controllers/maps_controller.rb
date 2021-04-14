@@ -12,13 +12,15 @@ class MapsController < ApplicationController
   end
 
   def create
+    ActiveRecord::Base.transaction do
     @map = Map.joins(:items)
     @map = Map.new(map_params)
-    if @map.save
+    if @map.save!
       redirect_to item_map_path(params[:item_id], @map[:id])
     else
       render :new
     end
+  end
   end
 
   def show
