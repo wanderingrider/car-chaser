@@ -1,4 +1,17 @@
 ja:
-  time:
-    formats:
-      default: "%Y/%m/%d %H:%M:%S"
+  activerecord:
+    attributes:
+      user:
+        nickname: ニックネーム
+        email: Eメール
+        first_name: 名字
+        last_name: 名前
+        read_first_name: 名字(ヨミガナ)
+        read_last_name: 名前(ヨミガナ)
+      item:
+        information_name: 車種名
+        image: 画像
+        description: 盗難時の状況
+        theft_day: 盗難にあった日付
+        prefecture_id: 盗難にあった場所
+        theft_place_id: 盗難にあった地域
