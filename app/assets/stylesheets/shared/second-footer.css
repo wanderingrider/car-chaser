@@ -1,16 +1,24 @@
 .second-footer{
  
+  height:60px;
   width: 100vw;
-  background-color: #696969;
+ 
   text-align: center;
   text-align: center;
-  justify-content: flex-end;
-  margin-top: auto;
-    bottom: 0;
+  position: relative;
+   
 }
 
-.car-chaser-contents {
+.car-chaser-contents2 {
+  height:80px;
+  width: 100vw;
+  text-align: center;
+  text-align: center;
+  position: relative;
+  background-color: #696969;
   margin-right: 18vh;
+  position:fixed;
+  bottom: 0;
 }
 .footer-link {
   color:white;
