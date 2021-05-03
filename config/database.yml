@@ -50,5 +50,6 @@ test:
 production:
   <<: *default
   database: car_chaser_production
-  username: car_chaser
-  password: <%= ENV['CAR_CHASER_DATABASE_PASSWORD'] %>
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+   socket: /var/lib/mysql/mysql.sock
