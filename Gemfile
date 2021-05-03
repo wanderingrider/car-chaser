@@ -78,3 +78,7 @@ gem 'bootstrap-will_paginate', '1.0.0'
 gem 'will_paginate-bootstrap4'
 
 gem 'rails-i18n'
+
+group :production do
+  gem 'unicorn', '5.4.1'
+end
