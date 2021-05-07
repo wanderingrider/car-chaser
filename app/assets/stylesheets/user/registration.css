@@ -167,7 +167,7 @@
 @media (max-width:599px) {
   .registration-main {
     width: 100%;
-    min-width:600px;
+    min-width:200px;
     height: 100%;
     background-color: #DCDCDC;
     display: flex;
@@ -177,9 +177,9 @@
   }
 
   .form-wrap {
-    width: 50%;
+    width: 95%;
     background-color: white;
-    padding-bottom: 70px;
+    padding-bottom: 100px;
   }
   
 }

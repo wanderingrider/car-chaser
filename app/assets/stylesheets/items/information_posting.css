@@ -79,3 +79,13 @@ a {
 
 .search-form .search-btn:hover {color: #fff;text-decoration: none;background-color: #006400;}
 
+@media (max-width: 820px) {
+
+.search-form .search-input {
+  width: 200px;
+  height: 5vh;
+  margin-right: 6px;
+  border:1px #ccc solid;color:#000053;
+  border-radius: 3px;
+}
+}
