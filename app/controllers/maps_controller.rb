@@ -15,7 +15,8 @@ class MapsController < ApplicationController
     ActiveRecord::Base.transaction do
     @map = Map.joins(:items)
     @map = Map.new(map_params)
-    if @map.save!
+    if @map.valid?
+      @map.save
       redirect_to item_map_path(params[:item_id], @map[:id])
     else
       render :new

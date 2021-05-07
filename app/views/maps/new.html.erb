@@ -3,6 +3,7 @@
 <div class="map-creation">
 <div class="map-part">
 <%= form_with model: @map, url: item_maps_path, local: true do |f| %>
+ <%= render 'shared/error_messages', model: f.object %>
  <h4 class="map-input">位置情報はこちらに入力してください。</h4>
  <%= f.text_field :address, placeholder: "位置情報" ,class: "map-text" %>
  <%= f.submit "登録する",class: "map-btn" %>
