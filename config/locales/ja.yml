@@ -15,3 +15,5 @@ ja:
         theft_day: 盗難にあった日付
         prefecture_id: 盗難にあった場所
         theft_place_id: 盗難にあった地域
+      map:
+        address: 位置情報

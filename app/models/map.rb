@@ -6,7 +6,5 @@ class Map < ApplicationRecord
 
   with_options presence: true do
     validates :address
-    validates :latitude
-    validates :longitude
   end
 end
