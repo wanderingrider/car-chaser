@@ -224,7 +224,7 @@ bottom:100px;}
 
 .page-content {
   margin-top:1500px;
-  padding-top: 850px;
+  padding-top: 600px;
   bottom:0;
   text-align: center;
   bottom:100px;
@@ -266,19 +266,17 @@ bottom:100px;}
   }
 
   .pagination a {
+    color:white;
     display: inline;
     padding:10px 15px;
     border:1px #ccc solid;color:#000053;
     border-radius: 5px / 5px;
-    margin-bottom: 0;
+    margin-bottom: 100px;
   }
 
   .pagination {
     justify-content: center;
-    position: fixed;
-    bottom:110px;
-    top:100px;
-    margin-left: 80px;
+    padding-bottom: 800px;
   }
 
   
