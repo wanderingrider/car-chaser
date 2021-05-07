@@ -45,4 +45,9 @@
     padding: 5px 5px;
     border-radius: 3%;
    }
+
+   .map-text {
+    width:70vw;
+    height: 5vh;
+  }
 }

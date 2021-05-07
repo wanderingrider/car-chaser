@@ -247,5 +247,11 @@
 }
 
 
+@media (max-width: 820px) {
+  .items-sell-contents {
+    min-width: 290px;
+  }
+}
+
 
 
