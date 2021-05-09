@@ -58,15 +58,18 @@
 
 <div class="comment-box">
 <% if user_signed_in? %>
-  <%= form_with model: [@item, @comment], local: true  do |f| %> 
-  <%= f.text_area :text, placeholder: "目撃情報を提供する", class: "comment-text" %>
-  <%= f.submit "SEND" ,class: "comment-btn" %>
+  <%= form_with model: [@item,@comment], id: "form"  do |f| %> 
+  <%= f.text_area :text, placeholder: "目撃情報を提供する", class: "comment-text", id:"text" %>
+  <%= f.submit "SEND" ,class: "comment-btn" ,id: "submit" %>
   <% end %>
 <% end %>
 
+<div id="list">
+</div>
+
 <div class="comments">
   <h4 class="comment-title">＜現在寄せられてる情報一覧＞</H4>
-  <% @comments.each do |comment| %>
+  <% @comments.each  do |comment| %>
   <p>
     <strong class="comment-name"><%= comment.user.nickname %></strong>
       <%= "日付: #{comment.created_at.to_s(:datetime)}" %>:
