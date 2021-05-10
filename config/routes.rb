@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   resources :items  do
     resources :maps
-    resources :comments, only: :create
+    resources :comments, only: [:create, :destroy]
     collection do
       get 'search' 
     end
