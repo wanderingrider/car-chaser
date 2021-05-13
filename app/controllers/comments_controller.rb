@@ -1,10 +1,10 @@
 class CommentsController < ApplicationController
   def create
     @item = Item.find(params[:item_id])
-    @comment = Comment.build(comment_params)
+    @comment = @item.comments.build(comment_params)
     @comment.user_id = current_user.id
-    if @comments.save
-    render  index
+    if @comment.save
+      render :index
     end
   end
 
