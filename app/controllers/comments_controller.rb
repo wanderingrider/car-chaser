@@ -4,7 +4,7 @@ class CommentsController < ApplicationController
     @comment = Comment.build(comment_params)
     @comment.user_id = current_user.id
     if @comments.save
-    render  template: 'items/show'
+    render  index
     end
   end
 
