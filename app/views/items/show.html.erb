@@ -58,13 +58,12 @@
 
 <div class="comments">
   <h4 class="comment-title">＜現在寄せられてる情報一覧＞</H4>
-  <div id="comments-area">
+  <div id="comments_area">
     <%= render partial: 'comments/index', locals: {comments: @comments} %>
   </div>
 </div>
 <div class="comment-box">
     <%= render partial: 'comments/form', locals: {comment: @comment, item: @item} %>
-
 </div>
 
 

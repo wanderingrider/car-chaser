@@ -11,11 +11,12 @@
  </div>
 
 <script>
+window.addEventListener("load", () => setTimeout(function(){
 history.pushState(null, null,null, location.href);
 window.addEventListener('popstate', (e) => {
   history.go(1);
 });
-window.addEventListener("load");
+},3000));
 </script>
 
  <% end %>

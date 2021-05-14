@@ -3,9 +3,8 @@ class CommentsController < ApplicationController
     @item = Item.find(params[:item_id])
     @comment = @item.comments.build(comment_params)
     @comment.user_id = current_user.id
-    if @comment.save
-      render :index
-    end
+    @comment.save
+    render :index
   end
 
 private
