@@ -4,6 +4,7 @@
       <%= c.text %>
     <br>
       投稿日: <%=  c.created_at.to_s(:datetime) %>
+      <%= link_to "削除", item_comment_path(c.item_id, c.id), method: :delete, remote: true, class: "comment-destroy" %>
     <br>
     <hr>
   </div>

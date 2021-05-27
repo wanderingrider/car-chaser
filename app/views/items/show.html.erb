@@ -50,7 +50,7 @@
     
       <div class="comments">
         <h4 class="comment-title">＜現在寄せられてる情報一覧＞</H4>
-        <div id="comments_area">
+        <div id='comments_area'>
         <%= render partial: 'comments/index', locals: {comments: @comments} %>
         </div>
       </div>
@@ -59,7 +59,6 @@
           <%= render partial: 'comments/form', locals: {comment: @comment, item: @item} %>
         <% end %>
       </div>
-
 
       <% if user_signed_in? %>
         <%= link_to "登録した地図情報を確認する", item_map_path(:id), class: "map-btn2" %>
