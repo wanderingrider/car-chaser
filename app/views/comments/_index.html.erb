@@ -1,9 +1,10 @@
-<% comments.each  do |c| %>
+<% comments.each do |c| %>
   <div>
-  <br>
     <strong class="comment-name"><%= c.user.nickname %></strong>
-      投稿日:<%=  c.created_at.to_s(:datetime) %>
       <%= c.text %>
-  <hr>
+    <br>
+      投稿日: <%=  c.created_at.to_s(:datetime) %>
+    <br>
+    <hr>
   </div>
 <% end %>

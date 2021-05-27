@@ -9,17 +9,13 @@
     </h2>
     <div class="item-img-content">
       <%= image_tag @item.image ,class:"item-box-img" %>
-      
-      
-      
     </div>
     
- 
     <% if user_signed_in? %>
       <% if current_user.id == @item.user.id %>
-       <%= link_to "情報の編集",edit_item_path(@item.id), method: :get, class: "item-red-btn" %>
-       <p class="or-text">or</p>
-       <%= link_to "削除", item_path(@item.id), method: :delete, class:"item-destroy" %>
+        <%= link_to "情報の編集",edit_item_path(@item.id), method: :get, class: "item-red-btn" %>
+        <p class="or-text">or</p>
+        <%= link_to "削除", item_path(@item.id), method: :delete, class:"item-destroy" %>
       <% end %>
     <% end %>
   
@@ -51,27 +47,24 @@
         </tr>
       </tbody>
     </table>
-    <div class="option">
-      
-      
-    </div>
+    
+      <div class="comments">
+        <h4 class="comment-title">＜現在寄せられてる情報一覧＞</H4>
+        <div id="comments_area">
+        <%= render partial: 'comments/index', locals: {comments: @comments} %>
+        </div>
+      </div>
+      <div class="comment-box">
+        <% if user_signed_in? %>
+          <%= render partial: 'comments/form', locals: {comment: @comment, item: @item} %>
+        <% end %>
+      </div>
 
-<div class="comments">
-  <h4 class="comment-title">＜現在寄せられてる情報一覧＞</H4>
-  <div id="comments_area">
-    <%= render partial: 'comments/index', locals: {comments: @comments} %>
+
+      <% if user_signed_in? %>
+        <%= link_to "登録した地図情報を確認する", item_map_path(:id), class: "map-btn2" %>
+      <% end %>
   </div>
 </div>
-<div class="comment-box">
-    <%= render partial: 'comments/form', locals: {comment: @comment, item: @item} %>
-</div>
 
-
-<% if user_signed_in? %>
-  <%= link_to "登録した地図情報を確認する", item_map_path(:id), class: "map-btn2" %>
-<% end %>
-</div>
-</div>
-
-
-  <%= render "shared/footer" %>
+<%= render "shared/footer" %>

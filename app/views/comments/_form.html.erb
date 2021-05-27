@@ -1,6 +1,4 @@
-<% if user_signed_in? %>
-  <%= form_for [@item, @comment], remote: true do |f| %> 
+  <%= form_with(model: [item, comment], url: item_comments_path(@item)) do |f| %> 
   <%= f.text_area :text, placeholder: "目撃情報を提供する", class: "comment-text" %>
   <%= f.submit "SEND" ,class: "comment-btn" %>
-  <% end %>
   <% end %>

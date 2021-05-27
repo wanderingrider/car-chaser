@@ -25,8 +25,8 @@ class ItemsController < ApplicationController
 
   def show
     @item = Item.find(params[:id])
+    @comments = @item.comments.order(created_at: :desc)
     @comment = Comment.new
-    @comments = @item.comments.order('created_at DESC')
   end
 
   def edit
