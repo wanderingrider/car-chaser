@@ -233,6 +233,14 @@
   font-weight: bold;
 }
 
+.comment-destroy {
+  margin-left: 50px;
+  background-color:#008080;
+  color:white;
+  padding: 8px;
+  border-radius: 10px;
+}
+
 @media (max-width:1024px) {
   .item-box {
     background-color: #FFF;
