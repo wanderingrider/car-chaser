@@ -1,4 +1,5 @@
 class CommentsController < ApplicationController
+
   def create
     @item = Item.find(params[:item_id])
     @comment = @item.comments.build(comment_params)
@@ -14,6 +15,7 @@ def destroy
     render :index
   end
 end
+
 private
 
   def comment_params

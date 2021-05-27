@@ -4,10 +4,10 @@
       <%= c.text %>
     <br>
       投稿日: <%=  c.created_at.to_s(:datetime) %>
-      <% if user_signed_in?%>
-      <% if current_user.id == c.user.id %>
-      <%= link_to "削除", item_comment_path(c.item_id, c.id), method: :delete, remote: true, class: "comment-destroy" %>
-      <% end %>
+      <% if user_signed_in? %>
+        <% if current_user.id == c.user.id %>
+          <%= link_to "削除", item_comment_path(c.item_id, c.id), method: :delete, remote: true, class: "comment-destroy" %>
+        <% end %>
       <% end %>
     <br>
     <hr>
