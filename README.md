@@ -9,6 +9,8 @@ Car Chaser
 
 ## 本番環境
 
+- AWS
+http://52.192.70.30/
 
 - Heroku
 https://car-chaser.herokuapp.com/
