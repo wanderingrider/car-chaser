@@ -30,6 +30,7 @@
   text-decoration: none;
   margin-right: 3vw;
   color: white;
+  font-family: 'Kameron', serif;
 }
 
 .brand-list {
@@ -48,12 +49,14 @@
   margin-right: 3vw;
   color: white;
   font-weight: bold;
+  font-family: 'Dela Gothic One', cursive;
 }
 
 
 .logout {
   text-decoration: none;
   color: white;
+  font-family: 'Dela Gothic One', cursive;
 }
 
 .login {
@@ -61,6 +64,7 @@
   line-height: 32px;
   margin-right: 3vw;
   color: white;
+  font-family: 'Dela Gothic One', cursive;
 }
 
 .sign-up {
