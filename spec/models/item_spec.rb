@@ -16,32 +16,32 @@ RSpec.describe Item, type: :model do
       it '車両画像を1枚つけないと保存できない' do
         @item.image = nil
         @item.valid?
-        expect(@item.errors.full_messages).to include("Image can't be blank")
+        expect(@item.errors.full_messages).to include("画像を入力してください")
       end
-      it '商品名が必須であること' do
+      it '車種名が必須であること' do
         @item.information_name = ''
         @item.valid?
-        expect(@item.errors.full_messages).to include("Information name can't be blank")
+        expect(@item.errors.full_messages).to include("車種名を入力してください")
       end
       it '盗難時の説明が必須であること' do
         @item.description = ''
         @item.valid?
-        expect(@item.errors.full_messages).to include("Description can't be blank")
+        expect(@item.errors.full_messages).to include("盗難時の状況を入力してください")
       end
       it '盗難場所の情報が必須であること' do
         @item.theft_place_id = '1'
         @item.valid?
-        expect(@item.errors.full_messages).to include('Theft place must be other than 1')
+        expect(@item.errors.full_messages).to include('盗難にあった地域は1以外の値にしてください')
       end
       it '盗難にあった地域の場所' do
         @item.prefecture_id = '1'
         @item.valid?
-        expect(@item.errors.full_messages).to include('Prefecture must be other than 1')
+        expect(@item.errors.full_messages).to include('盗難にあった場所は1以外の値にしてください')
       end
       it '盗難にあった日付情報が必須のこと' do
         @item.theft_day = ''
         @item.valid?
-        expect(@item.errors.full_messages).to include("Theft day can't be blank")
+        expect(@item.errors.full_messages).to include("盗難にあった日付を入力してください")
       end
     end
   end
