@@ -7,6 +7,7 @@ RSpec.describe "情報提供", type: :system do
   end
   context '情報提供ができるとき' do
     #ログインする
+    visit new_user_session_path
     #新規投稿ページへのボタンがあることを確認する
     #提供ページに移動する
     #フォームに情報を入力する
