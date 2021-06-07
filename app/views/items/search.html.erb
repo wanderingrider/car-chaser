@@ -4,7 +4,7 @@
   <h1 class='title'>新規盗難情報一覧</h1>
 
     <%= form_with url: search_items_path, local: true, method: :get, class: "search-form" do |f| %>
-        <%= f.text_field :keyword, placeholder: "情報を検索する", class: "search-input" %>                
+        <%= f.text_field :keyword, placeholder: "車種を検索する", class: "search-input" %>                
         <%= f.submit "検索", class: "search-btn" %>
     <% end %>
 
