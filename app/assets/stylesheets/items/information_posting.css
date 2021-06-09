@@ -32,7 +32,14 @@
   margin-right: 5px;
 }
 .item-img {
-  width: 40vh;
+  width: 38vh;
+  transition: all 0.6s ease 0s;
+  border-radius: 10px;
+}
+
+.item-img:hover { 
+  cursor: pointer;
+  transform: scale(1.08, 1.08);
 }
 
 .item-name {
