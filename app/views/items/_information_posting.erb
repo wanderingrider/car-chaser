@@ -2,7 +2,7 @@
   <h1 class='title'>新規盗難情報一覧</h1>
 
     <%= form_with url: search_items_path, local: true, method: :get, class: "search-form" do |f| %>
-        <%= f.text_field :keyword, placeholder: " 車種を検索する", class: "search-input" %>                
+        <%= f.text_field :keyword, placeholder: "  車種を検索する", class: "search-input" %>                
         <%= f.submit "検索", class: "search-btn" %>
     <% end %>
 
@@ -15,15 +15,15 @@
         </div>
         <div class='item-info'>
             <h3 class='item-name'>
-            [車種名]:
+            [車種名]
             <%= item.information_name %>
             </h3>
           <div class='theft_day'>
             <h3 class='item-name'>
-              [盗難日]：<%= item.theft_day %>
+              [盗難日] <%= item.theft_day %>
             </h3>
             <h3 class="item-name">
-              [ユーザー名]: <%= item.user.nickname %>
+              [ユーザー名]  <%= item.user.nickname %>
             </h3> 
             </div>
           </div>
