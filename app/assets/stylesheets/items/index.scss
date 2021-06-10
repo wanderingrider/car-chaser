@@ -127,8 +127,15 @@ html{
   position: fixed;
   padding: 15px;
   text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.25);
 }
 
+.purchase-btn:hover {
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.45);
+  transform: translateY(-0.2975em);
+}
 .purchase-btn-text {
   color: #fff;
   display: block;
