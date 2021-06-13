@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   root to: "items#index" 
 
   resources :items  do
+  
     resources :maps
     resources :comments, only: [:create, :destroy]
     collection do

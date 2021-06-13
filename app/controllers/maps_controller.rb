@@ -2,6 +2,7 @@ class MapsController < ApplicationController
   before_action :set_map, only: [:edit, :update]
 
   def index
+    @map = Map.find(params[:item_id])
     @map = Map.joins(:items)
     gon.map = @map
   end
@@ -17,12 +18,13 @@ class MapsController < ApplicationController
     @map = Map.new(map_params)
     if @map.valid?
       @map.save
-      redirect_to item_map_path(params[:item_id], @map[:id])
+      redirect_to item_map_path(params[:item_id],@map[:id])
     else
       render :new
     end
   end
   end
+
 
   def show
     @item = Item.find(params[:id])

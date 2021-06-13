@@ -13,14 +13,14 @@ class ItemsController < ApplicationController
 
   def create
     ActiveRecord::Base.transaction do
-    @item = Item.new(item_params)
-
-    if @item.save
-      redirect_to new_item_map_path(@item.id)
-    else
-      render :new
+      @item = Item.new(item_params)
+  
+      if @item.save
+        redirect_to new_item_map_path(@item.id)
+      else
+        render :new
+      end
     end
-  end
   end
 
   def show
@@ -61,5 +61,9 @@ class ItemsController < ApplicationController
 
   def move_to_index
     redirect_to action: :index if @item.user.id != current_user.id
+  end
+
+  def map_params
+    params.require(:map).permit(:address, :latitude, :longitude).merge(item_id: params[:item_id], user_id: current_user.id)
   end
 end
