@@ -1,17 +1,12 @@
 <%= render "shared/second-header" %>
 
 <div class="items-sell-contents">
-  
-
   <div class="items-sell-main">
     <h2 class="items-sell-title">盗難情報情報を入力</h2>
     <%= form_with model: @item, local: true do |f| %>
 
-    
     <%= render 'shared/error_messages', model: f.object %>
     
-
-  
     <div class="img-upload">
       <div class="weight-bold-text">
         車両画像
@@ -24,7 +19,6 @@
         <%= f.file_field :image, id:"item-image"  %>
       </div>
     </div>
-    
     
     <div class="new-items">
       <div class="weight-bold-text">
@@ -42,8 +36,6 @@
         <%= f.text_area :description, class:"items-text", id:"item-info", placeholder:"盗難状況の詳細など。" ,rows:"7" ,maxlength:"1000" %>
       </div>
     </div>
-    
-
     
     <%#div class="items-detail">
       <div class="weight-bold-text">車両の詳細</div>
@@ -111,8 +103,6 @@
         </p>
       </div>
   
-
-    
     <div class="sell-btn-contents">
       <%= f.submit "地図情報登録画面に遷移する" ,class:"sell-btn" %>
       <%=link_to 'もどる', root_path, class:"back-btn" %>

@@ -58,6 +58,13 @@
   margin: 20px 0px;
   padding: 2vh 5vw;
   border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.item-red-btn:hover {
+  border-bottom-color: transparent;
+  transform: translateY(0.1875em);
 }
 
 .or-text {
@@ -73,6 +80,13 @@
   margin: 20px 0px;
   padding: 2vh 5vw;
   border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.item-destroy:hover {
+  border-bottom-color: transparent;
+  transform: translateY(0.1875em);
 }
 
 .item-explain-box {
@@ -126,7 +140,6 @@
   border-radius: 40px;
   width: 15vw;
   min-width: 200px;
-
   padding: 1vh 0;
   color: black;
   border: 2px solid #2d2d2d;
@@ -138,9 +151,6 @@
 .report-flag-icon {
   margin-right: 5px;
 }
-
-
-
 
 .comment-box {
   width: 40vw;
@@ -174,6 +184,12 @@
   border-radius: 100px;
   margin-bottom: 2vh;
   justify-self: center;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.comment-btn:hover {
+  opacity: 0.8;
 }
 
 .comment-flag {
@@ -219,6 +235,13 @@
   color:white;
   border-radius:  10px;
   background-color: #ea352d;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.map-btn2:hover {
+  border-bottom-color: transparent;
+  transform: translateY(0.1875em);
 }
 
 .comments {

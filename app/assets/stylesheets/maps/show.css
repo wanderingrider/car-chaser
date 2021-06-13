@@ -52,6 +52,13 @@
   padding:10px;
   margin-bottom: 100px;
   border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.map-red-btn:hover {
+  border-bottom-color: transparent;
+  transform: translateY(0.1875em);
 }
 
 .map-while {
@@ -65,8 +72,14 @@
   font-size: 25px;
   padding: 10px;
   border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
 }
 
+.map-back:hover {
+  border-bottom-color: transparent;
+  transform: translateY(0.1875em);
+}
 @media (max-width: 599px) {
 
   .map-content{

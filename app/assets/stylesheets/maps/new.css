@@ -10,7 +10,7 @@
  margin-bottom: 250px;
  background-color:#D2691E;
  padding:50px 200px;
- border-radius: 3%;
+ border-radius: 20px;
 }
 
 .map-input {
@@ -28,7 +28,15 @@
   background-color: #ea352d;
   color: white;
   text-align: none;
-  padding: 5px 10px 5px 10px;
+  padding: 10px 10px 10px 10px;
+  border-radius: 10px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.map-btn:hover {
+  background: #006400;
 }
 
 @media (max-width: 599px) {
