@@ -6,6 +6,13 @@
     color: white;
     border-radius: 10px;
     background-color: #ea352d;
+    cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.top-btn:hover {
+  border-bottom-color: transparent;
+  transform: translateY(0.1875em);
 }
 
 @media (max-width: 820px) {

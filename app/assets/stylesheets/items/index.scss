@@ -34,9 +34,14 @@
   margin-top: 400px;
   margin-left: 40px;
   padding: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
 }
 
-.information-btn-text:hover{opacity: 0.9; background-color: red;}
+.information-btn-text:hover {
+  border-bottom-color: transparent;
+  transform: translateY(0.1875em);
+}
 
 .service-title {
   font-size: 55px;
