@@ -56,10 +56,10 @@ https://car-chaser.herokuapp.com/
   また、編集ができます。登録後はトップ→詳細画面→地図詳細ページの順で遷移できます。
  
   ### 詳細ページ
-  [![Image from Gyazo](https://i.gyazo.com/306021563968fe459e9768d9424919c7.png)](https://gyazo.com/306021563968fe459e9768d9424919c7)
+  [![Image from Gyazo](https://i.gyazo.com/d19fe2885aa435e412e3d21a07df204b.png)](https://gyazo.com/d19fe2885aa435e412e3d21a07df204b)
 
   トップページに表示された登録情報にクリックすると遷移します。
-  こちらで編集、削除、コメントが出来ます。また、先ほどの地図詳細ページに遷移できます。
+  こちらで編集、削除、コメント(非同期処理)が出来ます。また、先ほどの地図詳細ページに遷移できます。
 
 
 
