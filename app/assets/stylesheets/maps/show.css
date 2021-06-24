@@ -57,8 +57,7 @@
 }
 
 .map-red-btn:hover {
-  border-bottom-color: transparent;
-  transform: translateY(0.1875em);
+  opacity: 0.6;
 }
 
 .map-while {
@@ -74,6 +73,12 @@
   border-radius: 10px;
   cursor: pointer;
   transition: all 0.3s ease 0s;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.map-back:hover {
+  opacity: 0.6;
 }
 
 .map-back:hover {
