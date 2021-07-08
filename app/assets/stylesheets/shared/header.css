@@ -57,6 +57,12 @@
   text-decoration: none;
   color: white;
   font-family: 'Dela Gothic One', cursive;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.logout:hover {
+  opacity: 0.6;
 }
 
 .login {
@@ -65,11 +71,23 @@
   margin-right: 3vw;
   color: white;
   font-family: 'Dela Gothic One', cursive;
+  cursor: pointer;
+	transition: all 0.3s ease 0s;
+}
+
+.login:hover {
+  opacity: 0.6;
 }
 
 .sign-up {
   text-decoration: none;
   color: white;
+  cursor: pointer;
+	transition: all 0.3s ease 0s;
+}
+
+.sign-up:hover {
+  opacity: 0.6;
 }
 
 @media (max-width: 820px) {
